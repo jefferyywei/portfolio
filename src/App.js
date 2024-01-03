@@ -12,7 +12,6 @@ import github from './assets/images/github.png'
 import linkedin from './assets/images/linkedin.png'
 import { Grid } from '@mui/material';
 
-
 function App() {
   function handleScroll() {
     window.scroll({
@@ -42,7 +41,7 @@ function App() {
                 'Front-end Developer'
               ]}
               repeat={Infinity}
-              speed={51}
+              speed={50}
               />
               <br />
               <div className='button-container'>
@@ -103,13 +102,13 @@ function App() {
         <h2><a className = 'email' href="mailto:jefferywei05@gmail.com">jefferywei05@gmail.com</a></h2>
         <div className='icons-container'>
             <div className='card'>
-              <a href = "https://www.instagram.com/jefferywei_"><img src={insta}/></a>
+              <a target = 'blank' href = "https://www.instagram.com/jefferywei_"><img src={insta}/></a>
             </div>
             <div className='card'>
-              <a href = "https://github.com/BotDestroyer"><img src={github}/></a>
+              <a target = 'blank' href = "https://github.com/BotDestroyer"><img src={github}/></a>
             </div>
             <div className='card'>
-              <a href = 'https://www.linkedin.com/in/jefferywei/'><img src={linkedin}/></a>
+              <a target = 'blank' href = 'https://www.linkedin.com/in/jefferywei/'><img src={linkedin}/></a>
             </div>
         </div>
       </div>
