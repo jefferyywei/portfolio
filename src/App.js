@@ -42,7 +42,7 @@ function App() {
                 'Front-end Developer'
               ]}
               repeat={Infinity}
-              speed={50}
+              speed={51}
               />
               <br />
               <div className='button-container'>
