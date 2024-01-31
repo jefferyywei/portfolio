@@ -11,7 +11,7 @@ import church from './assets/images/church.png'
 import insta from './assets/images/instagram.png'
 import github from './assets/images/github.png'
 import linkedin from './assets/images/linkedin.png'
-import resume from './assets/resume.pdf'
+import resume from './assets/Wei_Jeffery_Resume.pdf'
 import { Grid } from '@mui/material';
 
 function App() {
