@@ -40,7 +40,7 @@ function App() {
               sequence={[
                 'Student',
                 1000,
-                'Front-end Developer'
+                'Full Stack Developer',
               ]}
               repeat={Infinity}
               speed={50}
