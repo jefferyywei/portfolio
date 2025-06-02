@@ -1,311 +1,325 @@
-$primary-color: #eeee;
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-@font-face {
-  font-family: 'Libre Franklin';
-  src: url('./assets/fonts/LibreFranklin-VariableFont_wght.ttf');
-}
-textarea{
-  font-family: 'Libre Franklin';
-}
-.home{
-  .flex{
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .text-zone {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    height:100vh;
+
+    .intro {
+      color: #A288E3;
+      font-size: 1vw;
+      margin: 0;
+    }
+
+    .large {
+      color: #B9B4C7;
+      font-size: 5.5vw;
+      margin: 0;
+      font-weight: 350;
+      padding: 0;
+    }
+
+    .small {
+      color: #A288E3;
+      font-size: 1.7vw;
+      margin: 0;
+      font-weight: 300;
+      line-height: 5vw;
+    }
   }
-  .text-zone{
-    width:40vw;
-    max-height:90%;
-  }
-  .large{
-    color: #EEEE;
-    font-size:7vw;
-    margin:0;
-    font-family: 'Libre Franklin';
-    font-weight: 350;
-    padding:0;
-  }
-  .small{
-    color: #B9B4C7;
-    font-size: 2.3vw;
-    margin:0;
-    font-weight: 300;
-    line-height: 5vw;
-  }
-  .button-container{
-    width:23vw;
+
+  .button-container {
+    width: 20vw;
     display: flex;
     justify-content: space-between;
-  }
-  button{
-    width: 10.5vw;
-    height:3.6vw;
-    border-radius: 10px;
-    background-color:#B9B4C7;
-    border: none;
-    text-decoration: none;
-    font-family: 'Libre Franklin';
-    font-size:1.3vw;
-    font-weight:500;
-    color: #f0f0f0;
-    margin-top:1vw;
-    &:hover{
-      color:#B9B4C7;
-      background-color: #f0f0f0;
+    margin-top: 1.5vw;
+
+    button {
+      width: 9vw;
+      height: 3vw;
+      border-radius: 10px;
+      background-color: #A288E3;
+      font-family: "Space Grotesk", sans-serif;
+      border: none;
+      text-decoration: none;
+      font-size: 1.1vw;
+      font-weight: 500;
+      color: #f0f0f0;
+      margin-top: 1vw;
+
+      &:hover {
+        color: #A288E3;
+        background-color: #F0F0F0;
+      }
     }
   }
-  .logo{
-    transform: rotate(7deg);
-    width:25vw;
-    margin-right:3vw;
-  }
-  .top-right{
+
+  .scroll-container {
     position: absolute;
-    top:1.3%;
-    left: 0.5%;
-    width:2.5vw;
-  }
-  .bottom-left{
-    position: absolute;
-    bottom:1.2%;
-    right: 0.8%;
-    width:2.5vw;
-    transform: rotate(180deg);
-  }
-  .scroll{
-    position:absolute;
-    transform: rotate(225deg);
-    width:1.8vw;
-    bottom:3%;
-    margin:auto;
-  }
-}
-.projects{
-  height:100%;
-  margin-top:9vw;
-  margin-left: 5%;
-  margin-right:5%;
-  h1{
-    color:#EEEE;
-    font-size: 3.3vw;
-    font-weight: 400;
-    margin-bottom:4vw;
-  }
-  img{
-    width:22vw;
-    height:14vw;
-    object-fit: cover;
-    border-radius: 20px;
-    &:hover{
-      filter:brightness(60%);
-    }
-  }
-  .link{
-    color:#B9B4C7;
-    font-size: 1.5vw;
-    font-weight: 400;
-    margin-top:10px;
-    text-align: center;
-    &:hover{
-      color: #9790AD;      
-    }
-  }
-  .card{
+    bottom: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+
+    .scroll-text {
+      color: #F0F0F0;
+      font-size: 0.8vw;
+      margin-bottom: 0.2vw;
+    }
+
+    .scroll-icon-wrapper {
+      animation: bounce 1.5s infinite;
+    }
+
+    .scroll-icon {
+      width: 1.3vw;
+      transform: rotate(225deg);
+    }
   }
-  .card-flex{
-    display: flex;
-    margin-top:0.5vw;
-    flex-direction: column;
-    align-items: center;
-    // width:50%;
-    gap:0.7vw;
-    .git-icon{
-        width:3vw;
-        height:3vw;
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(8px);
     }
   }
 }
-.contact{
-  margin-left: 5%;
-  margin-right:5%;
-  margin-top:9vw;
-  padding-bottom: 4vw;
-  h1{
-    color:#EEEE;
-    font-size: 3.3vw;
+
+.about {
+  margin: 15vw 20% 15vw 20%;
+  color: #A288E3;
+  scroll-margin-top: 35vh;
+
+  h1 {
+    font-size: 3vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
+  }
+
+  p {
+    font-size: 1.4vw;
+    font-weight: 300;
+    color: #F0F0F0;
+    line-height: 2.6vw;
+  }
+}
+
+.projects {
+  height: 100%;
+  margin: 0vw 20% 15vw 20%;
+  scroll-margin-top: 5vh;
+
+  h1 {
+    color: #A288E3;
+    font-size: 3vw;
+    font-weight: 400;
+    margin-bottom: 3vw;
+  }
+}
+
+.contact {
+  margin: 0 20% 15vw 20%;
+
+  h1 {
+    color: #A288E3;
+    font-size: 3vw;
     font-weight: 400;
   }
-  h2{
-    color:#B9B4C7;
+
+  h2 {
+    color: #B9B4C7;
     margin-top: -1vw;
     font-weight: 350;
     margin-bottom: 2vw;
-    font-size:1.7vw;
+    font-size: 1.7vw;
   }
-  .email{
-    color:#B9B4C7;
-    &:hover{
-      color: #9790AD;      
+
+  .email {
+    color: #B9B4C7;
+
+    &:hover {
+      color: #9790AD;
     }
   }
-  img{
-    width:4vw;
-    &:hover{
-      filter:brightness(60%);
+
+  img {
+    width: 3vw;
+
+    &:hover {
+      filter: brightness(60%);
     }
   }
-  .icons-container{
+
+  .icons-container {
     display: flex;
-    width:18vw;
+    width: 12vw;
     justify-content: space-between;
   }
 }
 
-@media only screen and (min-width:900px) and (max-width: 1200px) {
-  .link{
-    font-size: 1.8vw !important;
-  }
-  .card-flex{
-    margin-top:0vw !important;
-    .git-icon{
-        width:3.5vw !important;
-        height:3.5vw !important;
-    }
-  }
-}
-@media only screen and (min-width:768px) and (max-width: 900px) {
-  h1{
-    font-size: 5vw !important;
-  }
-  .projects{
-    img{
-      width:35vw;
-      height:18vw;
-    }
-    .link{
-      font-size: 2.2vw !important;
-    }
-    .git-icon{
-      width:4vw !important;
-      height:4vw !important;
-  }
-  }
-  button{
-    font-size: 1.55vw !important;
-  }
-  .contact{
-    img{
-      width:5.5vw;
-    }
-    .icons-container{
-      width:23vw;
-    }
-    h2{
-      line-height: 5vw;
-      font-size: 2.8vw;
-    }
-  }
-}
-@media only screen and (min-width:600px) and (max-width: 768px) {
-  .home{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    .flex{
-      width:80vw;
-    }
-    .small{
-      font-size: 3vw;
-      line-height: 7vw;
-    }
-    .button-container{
-      width:27vw;
-    }
-    button{
-      width:12vw;
-      height:4vw;
-      font-size: 1.7vw;
-    }
-    .top-right,.bottom-left{
-      width:4vw;
-    }
-    .scroll{
-      width:3vw;
-    }
-  }
-  h1{
-    font-size: 5vw !important;
-  }
-  .link{
-    font-size:2.3vw !important;
-  }
-  .git-icon{
-    height:4.5vw !important;
-    width:4.5vw !important;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .logo{
-      display: none;
-  }
-  .large{
-    font-size: 15vw !important;
-  }
-  .small{
-    font-size: 6vw !important;
-    line-height: 15vw !important;
-  }
-  .text-zone{
-    width: 80vw !important;
-  }
-  button{
-    width:20vw !important;
-    height:8vw !important;
-    font-size: 2.5vw !important;
-  }
-  .button-container{
-    width:45vw !important;
-  }
-  h1{
-    font-size: 6.5vw !important;
-  }
-  .projects{
-    h1{
-      margin-bottom: 7vw;
-    }
-    img{
-      width:37vw;
-      height:20vw;
-    }
-    .link{
-      font-size: 3vw !important;
-    }
-    .card-flex{
-      gap:1.3vw !important;
-    }
-    .git-icon{
-      height:6vw !important;
-      width:6vw !important;
-    }
-  }
-  .contact{
-    h1{
-      margin-top:15vw;
-    }
-    h2{
-      font-size: 3.8vw !important;
-      margin-bottom: 5vw !important;
-    }
-    img{
-      width: 8vw;
-    }
-    .icons-container{
-      width:30vw;
-      margin-bottom:3vw;
-    }
-  }
-}
+// @media only screen and (min-width:900px) and (max-width: 1200px) {
+//   .link{
+//     font-size: 1.8vw !important;
+//   }
+//   .card-flex{
+//     margin-top:0vw !important;
+//     .git-icon{
+//         width:3.5vw !important;
+//         height:3.5vw !important;
+//     }
+//   }
+// }
+// @media only screen and (min-width:768px) and (max-width: 900px) {
+//   h1{
+//     font-size: 5vw !important;
+//   }
+//   .projects{
+//     img{
+//       width:35vw;
+//       height:18vw;
+//     }
+//     .link{
+//       font-size: 2.2vw !important;
+//     }
+//     .git-icon{
+//       width:4vw !important;
+//       height:4vw !important;
+//   }
+//   }
+//   button{
+//     font-size: 1.55vw !important;
+//   }
+//   .contact{
+//     img{
+//       width:5.5vw;
+//     }
+//     .icons-container{
+//       width:23vw;
+//     }
+//     h2{
+//       line-height: 5vw;
+//       font-size: 2.8vw;
+//     }
+//   }
+// }
+// @media only screen and (min-width:600px) and (max-width: 768px) {
+//   .home{
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     .flex{
+//       width:80vw;
+//     }
+//     .small{
+//       font-size: 3vw;
+//       line-height: 7vw;
+//     }
+//     .button-container{
+//       width:27vw;
+//     }
+//     button{
+//       width:12vw;
+//       height:4vw;
+//       font-size: 1.7vw;
+//     }
+//     .top-right,.bottom-left{
+//       width:4vw;
+//     }
+//     .scroll{
+//       width:3vw;
+//     }
+//   }
+//   h1{
+//     font-size: 5vw !important;
+//   }
+//   .link{
+//     font-size:2.3vw !important;
+//   }
+//   .git-icon{
+//     height:4.5vw !important;
+//     width:4.5vw !important;
+//   }
+// }
+// @media only screen and (max-width: 600px) {
+//   .logo{
+//       display: none;
+//   }
+//   .large{
+//     font-size: 15vw !important;
+//   }
+//   .small{
+//     font-size: 6vw !important;
+//     line-height: 15vw !important;
+//   }
+//   .text-zone{
+//     width: 80vw !important;
+//   }
+//   button{
+//     width:20vw !important;
+//     height:8vw !important;
+//     font-size: 2.5vw !important;
+//   }
+//   .button-container{
+//     width:45vw !important;
+//   }
+//   h1{
+//     font-size: 6.5vw !important;
+//   }
+//   .projects{
+//     h1{
+//       margin-bottom: 7vw;
+//     }
+//     img{
+//       width:37vw;
+//       height:20vw;
+//     }
+//     .link{
+//       font-size: 3vw !important;
+//     }
+//     .card-flex{
+//       gap:1.3vw !important;
+//     }
+//     .git-icon{
+//       height:6vw !important;
+//       width:6vw !important;
+//     }
+//   }
+//   .contact{
+//     h1{
+//       margin-top:15vw;
+//     }
+//     h2{
+//       font-size: 3.8vw !important;
+//       margin-bottom: 5vw !important;
+//     }
+//     img{
+//       width: 8vw;
+//     }
+//     .icons-container{
+//       width:30vw;
+//       margin-bottom:3vw;
+//     }
+//   }
+// }

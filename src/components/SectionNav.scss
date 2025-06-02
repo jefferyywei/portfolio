@@ -1,0 +1,49 @@
+.section-nav {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  z-index: 999;
+  font-family: 'Space Grotesk', sans-serif;
+
+  .nav-item {
+    cursor: pointer;
+    color: #B9B4C7;
+    font-size: 1vw;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 0.2vw;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background-color: #A288E3;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #A288E3;
+    }
+
+    &.active {
+      color: #A288E3;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-nav {
+    display: none;
+  }
+}
