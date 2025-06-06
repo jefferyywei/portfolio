@@ -23,12 +23,12 @@
 
     .intro {
       color: #A288E3;
-      font-size: 1vw;
+      font-size: 1.05vw;
       margin: 0;
     }
 
     .large {
-      color: #B9B4C7;
+      color: #f0f0f0;
       font-size: 5.5vw;
       margin: 0;
       font-weight: 350;
@@ -137,6 +137,11 @@
     font-weight: 400;
     margin-bottom: 3vw;
   }
+}
+
+.skills{
+    margin: 0vw 20% 15vw 20%;
+    scroll-margin-top: 18vh;
 }
 
 .contact {

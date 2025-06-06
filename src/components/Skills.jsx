@@ -1,22 +1,34 @@
-import { FaPython, FaJs, FaJava, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiTypescript, SiC, SiOcaml, SiFlask, SiPytorch, SiFirebase } from 'react-icons/si';
+import { FaPython, FaJs, FaJava, FaReact, FaNodeJs, FaRust, FaGitAlt, FaFigma } from 'react-icons/fa';
+import { SiTypescript, SiC, SiOcaml, SiFlask, SiPytorch, SiFirebase, SiAssemblyscript, SiNextdotjs, SiScikitlearn, SiOpencv, SiJupyter } from 'react-icons/si';
 import './Skills.scss';
 import { motion } from "framer-motion";
 
-
-const techList = [
+const languages = [
     { label: "Python", icon: <FaPython /> },
     { label: "Java", icon: <FaJava /> },
     { label: "C", icon: <SiC /> },
     { label: "JavaScript", icon: <FaJs /> },
     { label: "TypeScript", icon: <SiTypescript /> },
-    { label: "React", icon: <FaReact /> },
-    { label: "Node.js", icon: <FaNodeJs /> },
+    { label: "Rust", icon: <FaRust /> },
     { label: "OCaml", icon: <SiOcaml /> },
-    { label: "Firebase", icon: <SiFirebase /> },
-    { label: "PyTorch", icon: <SiPytorch /> },
+    { label: "Assembly", icon: <SiAssemblyscript /> },
+];
+
+const frameworks = [
+    { label: "React", icon: <FaReact /> },
+    { label: "Next.js", icon: <SiNextdotjs /> },
+    { label: "Node.js", icon: <FaNodeJs /> },
     { label: "Flask", icon: <SiFlask /> },
+    { label: "Firebase", icon: <SiFirebase /> },
+    { label: "scikit-learn", icon: <SiScikitlearn /> },
+    { label: "PyTorch", icon: <SiPytorch /> },
+    { label: "OpenCV", icon: <SiOpencv /> },
+];
+
+const tools = [
     { label: "Git", icon: <FaGitAlt /> },
+    { label: "Figma", icon: <FaFigma /> },
+    { label: "Jupyter", icon: <SiJupyter /> },
 ];
 
 const badgeVariants = {
@@ -32,20 +44,19 @@ const badgeVariants = {
     }),
 };
 
-export default function Skills() {
+function SkillGrid({ title, skills }) {
     return (
-        <div className="skills-section">
-            <motion.h1
-                initial={{ opacity: 0, y: 25 }}
+        <div className="skills-category">
+            <motion.h2
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.3 }}
             >
-                Skills & Stack
-            </motion.h1>
-
+                {title}
+            </motion.h2>
             <div className="skills-grid">
-                {techList.map((tech, index) => (
+                {skills.map((tech, index) => (
                     <motion.div
                         className="badge"
                         key={tech.label}
@@ -60,6 +71,24 @@ export default function Skills() {
                     </motion.div>
                 ))}
             </div>
+        </div>
+    );
+}
+
+export default function Skills() {
+    return (
+        <div className="skills-section">
+            <motion.h1
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                Skills & Stack
+            </motion.h1>
+            <SkillGrid title="Languages" skills={languages} />
+            <SkillGrid title="Frameworks" skills={frameworks} />
+            <SkillGrid title="Tools" skills={tools} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './SectionNav.scss';
 
-const sections = ['home', 'about', 'projects', 'contact'];
+const sections = ['home', 'about', 'projects', 'skills', 'contact'];
 
 function SectionNav() {
   const [activeSection, setActiveSection] = useState('home');

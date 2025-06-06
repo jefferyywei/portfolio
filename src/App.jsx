@@ -102,26 +102,17 @@ function App() {
           align="left"
           label="Featured Project"
           title="SnapChef"
-          description="A web app that helps users find recipes using image recognition. Upload a photo of your ingredients, and SnapChef returns a list of dishes you can make."
-          tech={['React', 'Flask', 'OpenCV', 'MongoDB']}
+          description="A web app that helps users find recipes using YOLO object detection. Upload a photo of your ingredients, and SnapChef suggests a curated list of dishes you can make."
+          tech={['Python', 'Flask', 'OpenCV', 'MongoDB']}
           image={snapchef}
-          github="https://github.com/BotDestroyer/SnapChef"
+          github="https://github.com/jefferyywei/SnapChef"
           demo="https://jwei.pythonanywhere.com/"
-        />
-
-        <ProjectCard
-          align="right"
-          label="Featured Project"
-          title="Upcounty Prevention Network"
-          description="A resource hub for prevention efforts and community outreach in Montgomery County."
-          tech={['React', 'Flask', 'Styled Components']}
-          image={upn}
-          github="https://github.com/gurujaya/UPN-VersionGuru"
-          demo="https://www.upcountypreventionnetwork.org"
         />
       </div>
 
-      <Skills />
+      <div id='skills' className='skills'>
+        <Skills />
+      </div>
 
       <div id='contact' className='contact'>
         <motion.h1
@@ -155,7 +146,7 @@ function App() {
               key={i}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 + i * 0.1, ease: 'easeOut' }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.5 }}
             >
               <a target='blank' href={icon.href}>
