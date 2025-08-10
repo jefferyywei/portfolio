@@ -1,3 +1,10 @@
+$breakpoints: (
+  mobile: "(max-width: 480px)",
+  tablet: "(min-width: 481px) and (max-width: 949px)",
+  small-desktop: "(min-width: 950px) and (max-width: 1024px)",
+  large-desktop: "(min-width: 1025px)",
+);
+
 .section-nav {
   position: fixed;
   top: 2vw;
@@ -6,34 +13,44 @@
   flex-direction: column;
   gap: 1vw;
   z-index: 999;
-  font-family: 'Space Grotesk', sans-serif;
+  // font-family: 'Space Grotesk', sans-serif;
 
   .nav-item {
     cursor: pointer;
-    color: #B9B4C7;
-    font-size: 1vw;
-    font-weight: 400;
+    color: #b4b4b4;
+    font-size: 1.4rem;
+    font-weight: 500;
     position: relative;
     padding-bottom: 0.2vw;
     transition: color 0.3s ease;
 
+    @media #{map-get($breakpoints, small-desktop)} {
+      font-size: 1.2rem;
+    }
+
+    @media #{map-get($breakpoints, mobile)} {
+    }
+
+    @media #{map-get($breakpoints, tablet)} {
+    }
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       height: 2px;
       width: 0%;
-      background-color: #A288E3;
+      background-color: #89cff0;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: #A288E3;
+      color: #89cff0;
     }
 
     &.active {
-      color: #A288E3;
+      color: #89cff0;
 
       &::after {
         width: 100%;

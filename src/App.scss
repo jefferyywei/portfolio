@@ -1,3 +1,10 @@
+$breakpoints: (
+  mobile: "(max-width: 480px)",
+  tablet: "(min-width: 481px) and (max-width: 949px)",
+  small-desktop: "(min-width: 950px) and (max-width: 1024px)",
+  large-desktop: "(min-width: 1025px)",
+);
+
 .hero {
   position: relative;
   display: flex;
@@ -22,50 +29,103 @@
     align-items: center;
 
     .intro {
-      color: #A288E3;
-      font-size: 1.05vw;
+      color: #89cff0;
+      font-size: 1.5rem;
+      font-weight: 500;
       margin: 0;
+
+      @media #{map-get($breakpoints, small-desktop)} {
+        font-size: 1.2rem;
+      }
+
+      @media #{map-get($breakpoints, mobile)} {
+      }
+
+      @media #{map-get($breakpoints, tablet)} {
+      }
     }
 
     .large {
       color: #f0f0f0;
-      font-size: 5.5vw;
+      font-size: 7rem;
       margin: 0;
-      font-weight: 350;
+      font-weight: 600;
       padding: 0;
+
+      @media #{map-get($breakpoints, small-desktop)} {
+        font-size: 6rem;
+      }
+
+      @media #{map-get($breakpoints, mobile)} {
+      }
+
+      @media #{map-get($breakpoints, tablet)} {
+      }
     }
 
     .small {
-      color: #A288E3;
-      font-size: 1.7vw;
+      color: #89cff0;
+      font-size: 2.15rem;
       margin: 0;
-      font-weight: 300;
       line-height: 5vw;
+
+      @media #{map-get($breakpoints, small-desktop)} {
+        font-size: 1.8rem;
+        line-height: 7vw;
+      }
+
+      @media #{map-get($breakpoints, mobile)} {
+      }
+
+      @media #{map-get($breakpoints, tablet)} {
+      }
     }
   }
 
   .button-container {
-    width: 20vw;
+    width: 25vw;
     display: flex;
     justify-content: space-between;
     margin-top: 1.5vw;
+    @media #{map-get($breakpoints, small-desktop)} {
+      width: 35vw;
+    }
+
+    @media #{map-get($breakpoints, mobile)} {
+    }
+
+    @media #{map-get($breakpoints, tablet)} {
+    }
 
     button {
-      width: 9vw;
-      height: 3vw;
+      width: 10vw;
+      height: 3.2vw;
       border-radius: 10px;
-      background-color: #A288E3;
-      font-family: "Space Grotesk", sans-serif;
+      background-color: #89cff0;
+      font-family: "DM Sans", sans-serif;
       border: none;
       text-decoration: none;
-      font-size: 1.1vw;
-      font-weight: 500;
-      color: #f0f0f0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0d0d0d;
       margin-top: 1vw;
+      transition: transform 0.2s ease;
+
+      @media #{map-get($breakpoints, small-desktop)} {
+        width: 15vw;
+        height: 5vw;
+        font-size: 1.4rem;
+      }
+
+      @media #{map-get($breakpoints, mobile)} {
+      }
+
+      @media #{map-get($breakpoints, tablet)} {
+      }
 
       &:hover {
-        color: #A288E3;
-        background-color: #F0F0F0;
+        transform: translateY(-5px);
+        cursor: pointer;
       }
     }
   }
@@ -79,8 +139,8 @@
     cursor: pointer;
 
     .scroll-text {
-      color: #F0F0F0;
-      font-size: 0.8vw;
+      color: #f0f0f0;
+      font-size: 1rem;
       margin-bottom: 0.2vw;
     }
 
@@ -95,7 +155,6 @@
   }
 
   @keyframes bounce {
-
     0%,
     100% {
       transform: translateY(0);
@@ -109,20 +168,30 @@
 
 .about {
   margin: 15vw 20% 15vw 20%;
-  color: #A288E3;
+  color: #89cff0;
   scroll-margin-top: 35vh;
 
   h1 {
-    font-size: 3vw;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 600;
     margin-bottom: 2vw;
+
+    @media #{map-get($breakpoints, small-desktop)} {
+      font-size: 3.5rem;
+    }
+
+    @media #{map-get($breakpoints, mobile)} {
+    }
+
+    @media #{map-get($breakpoints, tablet)} {
+    }
   }
 
   p {
-    font-size: 1.4vw;
-    font-weight: 300;
-    color: #F0F0F0;
-    line-height: 2.6vw;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #f0f0f0;
+    line-height: 2.2vw;
   }
 }
 
@@ -132,48 +201,48 @@
   scroll-margin-top: 5vh;
 
   h1 {
-    color: #A288E3;
-    font-size: 3vw;
-    font-weight: 400;
+    color: #89cff0;
+    font-size: 4rem;
+    font-weight: 600;
     margin-bottom: 3vw;
   }
 }
 
-.skills{
-    margin: 0vw 20% 15vw 20%;
-    scroll-margin-top: 18vh;
+.skills {
+  margin: 0vw 20% 15vw 20%;
+  scroll-margin-top: 16vh;
 }
 
 .contact {
   margin: 0 20% 15vw 20%;
 
   h1 {
-    color: #A288E3;
-    font-size: 3vw;
-    font-weight: 400;
+    color: #89cff0;
+    font-size: 4rem;
+    font-weight: 600;
   }
 
   h2 {
-    color: #B9B4C7;
+    color: #f0f0f0;
     margin-top: -1vw;
-    font-weight: 350;
+    font-weight: 400;
     margin-bottom: 2vw;
-    font-size: 1.7vw;
+    font-size: 2rem;
   }
 
   .email {
-    color: #B9B4C7;
+    color: #f0f0f0;
 
     &:hover {
-      color: #9790AD;
+      color: #b4b4b4;
     }
   }
 
   img {
     width: 3vw;
-
+    transition: transform 0.2s ease;
     &:hover {
-      filter: brightness(60%);
+      transform: translateY(-8px);
     }
   }
 
@@ -183,148 +252,3 @@
     justify-content: space-between;
   }
 }
-
-// @media only screen and (min-width:900px) and (max-width: 1200px) {
-//   .link{
-//     font-size: 1.8vw !important;
-//   }
-//   .card-flex{
-//     margin-top:0vw !important;
-//     .git-icon{
-//         width:3.5vw !important;
-//         height:3.5vw !important;
-//     }
-//   }
-// }
-// @media only screen and (min-width:768px) and (max-width: 900px) {
-//   h1{
-//     font-size: 5vw !important;
-//   }
-//   .projects{
-//     img{
-//       width:35vw;
-//       height:18vw;
-//     }
-//     .link{
-//       font-size: 2.2vw !important;
-//     }
-//     .git-icon{
-//       width:4vw !important;
-//       height:4vw !important;
-//   }
-//   }
-//   button{
-//     font-size: 1.55vw !important;
-//   }
-//   .contact{
-//     img{
-//       width:5.5vw;
-//     }
-//     .icons-container{
-//       width:23vw;
-//     }
-//     h2{
-//       line-height: 5vw;
-//       font-size: 2.8vw;
-//     }
-//   }
-// }
-// @media only screen and (min-width:600px) and (max-width: 768px) {
-//   .home{
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     .flex{
-//       width:80vw;
-//     }
-//     .small{
-//       font-size: 3vw;
-//       line-height: 7vw;
-//     }
-//     .button-container{
-//       width:27vw;
-//     }
-//     button{
-//       width:12vw;
-//       height:4vw;
-//       font-size: 1.7vw;
-//     }
-//     .top-right,.bottom-left{
-//       width:4vw;
-//     }
-//     .scroll{
-//       width:3vw;
-//     }
-//   }
-//   h1{
-//     font-size: 5vw !important;
-//   }
-//   .link{
-//     font-size:2.3vw !important;
-//   }
-//   .git-icon{
-//     height:4.5vw !important;
-//     width:4.5vw !important;
-//   }
-// }
-// @media only screen and (max-width: 600px) {
-//   .logo{
-//       display: none;
-//   }
-//   .large{
-//     font-size: 15vw !important;
-//   }
-//   .small{
-//     font-size: 6vw !important;
-//     line-height: 15vw !important;
-//   }
-//   .text-zone{
-//     width: 80vw !important;
-//   }
-//   button{
-//     width:20vw !important;
-//     height:8vw !important;
-//     font-size: 2.5vw !important;
-//   }
-//   .button-container{
-//     width:45vw !important;
-//   }
-//   h1{
-//     font-size: 6.5vw !important;
-//   }
-//   .projects{
-//     h1{
-//       margin-bottom: 7vw;
-//     }
-//     img{
-//       width:37vw;
-//       height:20vw;
-//     }
-//     .link{
-//       font-size: 3vw !important;
-//     }
-//     .card-flex{
-//       gap:1.3vw !important;
-//     }
-//     .git-icon{
-//       height:6vw !important;
-//       width:6vw !important;
-//     }
-//   }
-//   .contact{
-//     h1{
-//       margin-top:15vw;
-//     }
-//     h2{
-//       font-size: 3.8vw !important;
-//       margin-bottom: 5vw !important;
-//     }
-//     img{
-//       width: 8vw;
-//     }
-//     .icons-container{
-//       width:30vw;
-//       margin-bottom:3vw;
-//     }
-//   }
-// }
