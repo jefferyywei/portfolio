@@ -50,7 +50,7 @@ function App() {
           <button onClick={handleScroll}> Contact Me</button>
         </div>
 
-        <div className="scroll-container" onClick={handleScroll}>
+        <div className="scroll-container">
           <p className="scroll-text">Scroll to explore</p>
           <div className="scroll-icon-wrapper">
             <img src={corner} alt="scroll-down" className="scroll-icon" />
