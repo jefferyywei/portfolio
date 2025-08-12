@@ -8,7 +8,7 @@ import snapchef from "./assets/images/snapchef.png";
 import insta from "./assets/images/instagram.png";
 import github from "./assets/images/github.png";
 import linkedin from "./assets/images/linkedin.png";
-import resume from "./assets/Wei_Jeffery_Resume.pdf";
+import resume from "./assets/Jeffery_Wei_Resume.pdf";
 
 import ParticleBackground from "./components/ParticleBackground";
 import ProjectCard from "./components/ProjectCard";
@@ -53,7 +53,7 @@ function App() {
         <div className="scroll-container" onClick={handleScroll}>
           <p className="scroll-text">Scroll to explore</p>
           <div className="scroll-icon-wrapper">
-            <img src={corner} className="scroll-icon" />
+            <img src={corner} alt="scroll-down" className="scroll-icon" />
           </div>
         </div>
       </div>
