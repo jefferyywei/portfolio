@@ -1,10 +1,3 @@
-$breakpoints: (
-  mobile: "(max-width: 480px)",
-  tablet: "(min-width: 481px) and (max-width: 949px)",
-  small-desktop: "(min-width: 950px) and (max-width: 1024px)",
-  large-desktop: "(min-width: 1025px)",
-);
-
 .section-nav {
   position: fixed;
   top: 2vw;
@@ -13,7 +6,15 @@ $breakpoints: (
   flex-direction: column;
   gap: 1vw;
   z-index: 999;
-  // font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(137, 207, 240, 0.2);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 
   .nav-item {
     cursor: pointer;
@@ -23,16 +24,6 @@ $breakpoints: (
     position: relative;
     padding-bottom: 0.2vw;
     transition: color 0.3s ease;
-
-    @media #{map-get($breakpoints, small-desktop)} {
-      font-size: 1.2rem;
-    }
-
-    @media #{map-get($breakpoints, mobile)} {
-    }
-
-    @media #{map-get($breakpoints, tablet)} {
-    }
 
     &::after {
       content: "";
@@ -59,7 +50,20 @@ $breakpoints: (
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .section-nav {
+    top: 3vw;
+    left: 3vw;
+    gap: 1.6vw;
+
+    .nav-item {
+      font-size: 1.2rem;
+      padding-bottom: 0.4vw;
+    }
+  }
+}
+
+@media (max-width: 900px) {
   .section-nav {
     display: none;
   }

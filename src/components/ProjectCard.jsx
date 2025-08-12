@@ -15,7 +15,10 @@ function ProjectCard({
   const isLeft = align === "left";
 
   return (
-    <div className={`project-card ${align === "right" ? "reverse" : ""}`}>
+    <div
+      className={`project-card ${align === "right" ? "reverse" : ""}`}
+      style={{ "--bg-url": `url(${image})` }}
+    >
       <motion.div
         className="project-image"
         initial={{ opacity: 0, x: isLeft ? -80 : 80 }}
