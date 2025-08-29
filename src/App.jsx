@@ -105,7 +105,7 @@ function App() {
           label="Featured Project"
           title="StreamSync"
           description="A real-time data dashboard powered by WebSocket streaming. Visualizes finance, IoT, weather, system, and custom data sources in an interactive React interface, with PostgreSQL persistence, custom API integration, and a containerized stack built on Docker."
-          tech={["React + TS", "Node.js", "WebSockets", "PostgreSQL, Docker"]}
+          tech={["React", "Node.js", "Express", "WebSockets", "PostgreSQL", "Docker"]}
           image={streamsync}
           github="https://github.com/jefferyywei/streamsync"
           demo=""
