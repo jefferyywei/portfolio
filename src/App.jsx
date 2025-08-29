@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 import corner from "./assets/images/corner.png";
 import snapchef from "./assets/images/snapchef.png";
+import streamsync from "./assets/images/streamsync.png"
 import insta from "./assets/images/instagram.png";
 import github from "./assets/images/github.png";
 import linkedin from "./assets/images/linkedin.png";
-import resume from "./assets/Jeffery_Wei_Resume.pdf";
 
 import ParticleBackground from "./components/ParticleBackground";
 import ProjectCard from "./components/ProjectCard";
@@ -44,7 +44,7 @@ function App() {
         </div>
 
         <div className="button-container">
-          <a href={resume} without rel="noopener noreferrer" target="_blank">
+          <a href="/Jeffery_Wei_Resume.pdf" rel="noopener noreferrer" target="_blank">
             <button> Resume</button>
           </a>
           <button onClick={handleScroll}> Contact Me</button>
@@ -99,9 +99,20 @@ function App() {
         >
           Projects
         </motion.h1>
-
+        
         <ProjectCard
           align="left"
+          label="Featured Project"
+          title="StreamSync"
+          description="A real-time data dashboard powered by WebSocket streaming. Visualizes finance, IoT, weather, system, and custom data sources in an interactive React interface, with PostgreSQL persistence, custom API integration, and a containerized stack built on Docker."
+          tech={["React + TS", "Node.js", "WebSockets", "PostgreSQL, Docker"]}
+          image={streamsync}
+          github="https://github.com/jefferyywei/streamsync"
+          demo=""
+        />
+
+        <ProjectCard
+          align="right"
           label="Featured Project"
           title="SnapChef"
           description="An interactive cooking assistant that helps users find recipes using YOLO object detection. Upload a photo of your ingredients, and SnapChef suggests a curated list of dishes you can make."
@@ -157,7 +168,7 @@ function App() {
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              <a target="blank" href={icon.href}>
+              <a target="_blank" rel="noopener noreferrer" href={icon.href}>
                 <img src={icon.src} alt="" />
               </a>
             </motion.div>

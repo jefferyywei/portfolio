@@ -7,6 +7,7 @@ import {
   FaRust,
   FaGitAlt,
   FaFigma,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -19,17 +20,23 @@ import {
   SiNextdotjs,
   SiScikitlearn,
   SiOpencv,
-  SiJupyter,
+  SiPostgresql,
+  SiExpress,
+  SiGraphql,
 } from "react-icons/si";
+
+import { TbBrandReactNative, TbSql } from "react-icons/tb";
+
 import "./Skills.scss";
 import { motion } from "framer-motion";
 
 const languages = [
   { label: "Python", icon: <FaPython /> },
   { label: "Java", icon: <FaJava /> },
-  { label: "C", icon: <SiC /> },
   { label: "JavaScript", icon: <FaJs /> },
   { label: "TypeScript", icon: <SiTypescript /> },
+  { label: "C", icon: <SiC /> },
+  { label: "SQL", icon: <TbSql /> },
   { label: "Rust", icon: <FaRust /> },
   { label: "OCaml", icon: <SiOcaml /> },
   { label: "Assembly", icon: <SiAssemblyscript /> },
@@ -38,18 +45,22 @@ const languages = [
 const frameworks = [
   { label: "React", icon: <FaReact /> },
   { label: "Next.js", icon: <SiNextdotjs /> },
+  { label: "React Native", icon: <TbBrandReactNative /> },
   { label: "Node.js", icon: <FaNodeJs /> },
+  { label: "Express", icon: <SiExpress /> },
   { label: "Flask", icon: <SiFlask /> },
-  { label: "Firebase", icon: <SiFirebase /> },
-  { label: "scikit-learn", icon: <SiScikitlearn /> },
   { label: "PyTorch", icon: <SiPytorch /> },
+  { label: "scikit-learn", icon: <SiScikitlearn /> },
   { label: "OpenCV", icon: <SiOpencv /> },
 ];
 
 const tools = [
   { label: "Git", icon: <FaGitAlt /> },
+  { label: "Docker", icon: <FaDocker /> },
+  { label: "PostgreSQL", icon: <SiPostgresql /> },
+  { label: "Firebase", icon: <SiFirebase /> },
+  { label: "GraphQL", icon: <SiGraphql /> },
   { label: "Figma", icon: <FaFigma /> },
-  { label: "Jupyter", icon: <SiJupyter /> },
 ];
 
 const badgeVariants = {
@@ -108,8 +119,8 @@ export default function Skills() {
         Skills & Stack
       </motion.h1>
       <SkillGrid title="Languages" skills={languages} />
-      <SkillGrid title="Frameworks" skills={frameworks} />
-      <SkillGrid title="Tools" skills={tools} />
+      <SkillGrid title="Frameworks & Libraries" skills={frameworks} />
+      <SkillGrid title="Developer Tools & Platforms" skills={tools} />
     </div>
   );
 }
